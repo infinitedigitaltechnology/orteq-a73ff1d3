@@ -31,6 +31,7 @@ export function SiteHeader() {
 
   return (
     <header
+      onMouseLeave={() => setMega(null)}
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled ? "glass-panel" : "bg-background/60 backdrop-blur-md"
       }`}
@@ -43,7 +44,6 @@ export function SiteHeader() {
           </Link>
           <nav
             className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex"
-            onMouseLeave={() => setMega(null)}
           >
             {NAV.slice(1, 5).map((item) => (
               <div key={item.to} className="relative" onMouseEnter={() => setMega(item.mega ?? null)}>
