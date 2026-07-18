@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, User } from "lucide-react";
 import { PRODUCTS, INDUSTRIES, SOLUTIONS } from "@/lib/site-data";
+import { useSession } from "@/hooks/use-session";
 
 const NAV = [
   { to: "/", label: "Home" },
