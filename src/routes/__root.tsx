@@ -167,6 +167,8 @@ function RootComponent() {
         </main>
         <SiteFooter />
         <FloatingCTA />
+        <Toaster />
+
       </div>
     </QueryClientProvider>
   );
