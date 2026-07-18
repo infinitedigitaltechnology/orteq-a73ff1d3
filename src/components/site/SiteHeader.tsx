@@ -70,12 +70,21 @@ export function SiteHeader() {
           </nav>
         </div>
         <div className="flex items-center gap-3">
-          <Link
-            to="/dealer"
-            className="hidden text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary md:inline"
-          >
-            Become a dealer
-          </Link>
+          {user ? (
+            <Link
+              to="/account"
+              className="hidden items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2 text-xs font-medium hover:border-foreground md:inline-flex"
+            >
+              <User className="size-3.5" /> Account
+            </Link>
+          ) : (
+            <Link
+              to="/auth"
+              className="hidden text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary md:inline"
+            >
+              Sign in
+            </Link>
+          )}
           <Link
             to="/contact"
             className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-transform hover:brightness-110 active:scale-95"
