@@ -62,7 +62,7 @@ function IndustryDetail() {
           <div>
             <span className="text-xs font-medium uppercase tracking-widest text-primary">Challenges</span>
             <ul className="mt-6 space-y-4">
-              {industry.challenges.map((c) => (
+              {industry.challenges.map((c: string) => (
                 <li key={c} className="flex items-start gap-3 text-base text-foreground/85">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
                   {c}
@@ -73,7 +73,7 @@ function IndustryDetail() {
           <div>
             <span className="text-xs font-medium uppercase tracking-widest text-primary">ORTEQ answers</span>
             <ul className="mt-6 space-y-4">
-              {industry.solutions.map((c) => (
+              {industry.solutions.map((c: string) => (
                 <li key={c} className="flex items-start gap-3 text-base text-foreground/85">
                   <Check className="mt-1 size-4 shrink-0 text-primary" />
                   {c}

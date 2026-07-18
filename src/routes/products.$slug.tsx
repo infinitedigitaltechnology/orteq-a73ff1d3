@@ -71,7 +71,7 @@ function ProductDetail() {
             </Link>
           </div>
           <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-hairline pt-8">
-            {product.specs.map((s) => (
+            {product.specs.map((s: { label: string; value: string }) => (
               <div key={s.label}>
                 <dt className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
                   {s.label}
@@ -89,7 +89,7 @@ function ProductDetail() {
             <div>
               <h2 className="font-display text-2xl font-semibold">Key features</h2>
               <ul className="mt-6 space-y-3">
-                {product.features.map((f) => (
+                {product.features.map((f: string) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-foreground/85">
                     <Check className="mt-0.5 size-4 shrink-0 text-primary" />
                     {f}
@@ -100,7 +100,7 @@ function ProductDetail() {
             <div>
               <h2 className="font-display text-2xl font-semibold">Why ORTEQ</h2>
               <ul className="mt-6 space-y-3">
-                {product.advantages.map((f) => (
+                {product.advantages.map((f: string) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-foreground/85">
                     <Check className="mt-0.5 size-4 shrink-0 text-primary" />
                     {f}
@@ -115,7 +115,7 @@ function ProductDetail() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="mb-8 font-display text-2xl font-semibold">Ideal applications</h2>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {product.applications.map((a) => (
+          {product.applications.map((a: string) => (
             <div
               key={a}
               className="rounded-2xl border border-hairline bg-white p-5 text-sm font-medium text-foreground"
