@@ -266,6 +266,7 @@ export const PRODUCTS: Product[] = [
       { label: "OS", value: "Android 13 + Windows OPS" },
       { label: "Warranty", value: "3 years on-site" },
     ],
+  },
   {
     slug: "drones",
     name: "Drones",
