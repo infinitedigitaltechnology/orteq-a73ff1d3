@@ -6,6 +6,7 @@ import productSelfservice from "@/assets/product-selfservice.jpg";
 import productPos from "@/assets/product-pos.jpg";
 import productIndustrial from "@/assets/product-industrial.jpg";
 import productIfp from "@/assets/product-ifp.jpg";
+import productDrone from "@/assets/product-drone.jpg";
 
 import indCorporate from "@/assets/industry-corporate.jpg";
 import indEducation from "@/assets/industry-education.jpg";
