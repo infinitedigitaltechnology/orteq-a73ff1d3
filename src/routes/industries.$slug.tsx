@@ -88,7 +88,7 @@ function IndustryDetail() {
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="mb-8 font-display text-2xl font-semibold">Recommended products</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {recommended.map((p) => (
+            {recommended.map((p: (typeof PRODUCTS)[number]) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
