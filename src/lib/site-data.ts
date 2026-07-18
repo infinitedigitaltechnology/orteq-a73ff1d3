@@ -266,6 +266,35 @@ export const PRODUCTS: Product[] = [
       { label: "OS", value: "Android 13 + Windows OPS" },
       { label: "Warranty", value: "3 years on-site" },
     ],
+  {
+    slug: "drones",
+    name: "Drones",
+    tagline: "Aerial intelligence, on demand.",
+    description:
+      "Commercial-grade drones for surveillance, inspection, mapping and cinematic capture — engineered for enterprise workflows and mission-critical operations.",
+    image: productDrone,
+    applications: ["Surveillance & security", "Industrial inspection", "Survey & mapping", "Cinematography"],
+    features: [
+      "4K / 8K stabilised gimbal camera",
+      "Up to 45 minutes flight time",
+      "10 km HD video transmission",
+      "Obstacle avoidance in 6 directions",
+      "RTK centimetre-level GPS",
+      "Thermal & zoom payload options",
+    ],
+    advantages: [
+      "Rapid deployment in minutes",
+      "Live streaming to control rooms",
+      "DGCA-compliant flight logging",
+    ],
+    specs: [
+      { label: "Payload", value: "4K / 8K / Thermal / Zoom" },
+      { label: "Flight time", value: "Up to 45 min" },
+      { label: "Range", value: "10 km HD FPV" },
+      { label: "Wind resistance", value: "12 m/s" },
+      { label: "Positioning", value: "RTK GNSS ±1 cm" },
+      { label: "Warranty", value: "1 year + care plan" },
+    ],
   },
 ];
 
