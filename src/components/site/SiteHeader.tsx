@@ -20,6 +20,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mega, setMega] = useState<null | "products" | "industries" | "solutions">(null);
+  const { user } = useSession();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
