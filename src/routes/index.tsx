@@ -51,8 +51,8 @@ function Hero() {
             <span className="size-1.5 rounded-full bg-primary" /> India · Est. 2010
           </span>
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground md:text-7xl lg:text-[5.5rem] text-balance">
-            Display solutions
-            <br /> to <span className="text-primary">everyone.</span>
+            Future Technology&nbsp;
+            <br /> in <span className="text-primary">Your Hand.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
             From boardrooms to skylines — ORTEQ engineers LED walls, interactive panels and mission-critical
