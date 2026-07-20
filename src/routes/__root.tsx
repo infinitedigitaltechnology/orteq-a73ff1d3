@@ -82,28 +82,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ORTEQ India — Display Solutions to Everyone" },
+      { title: "ORTEQ India — Premium Display Solutions" },
       {
         name: "description",
         content:
-          "ORTEQ India is a leading commercial display solutions company — LED walls, interactive flat panels, video walls, digital signage, industrial and enterprise displays for Education, Retail, Healthcare and Government.",
+          "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments.",
       },
       { name: "author", content: "ORTEQ India Pvt Ltd" },
       { name: "theme-color", content: "#D71920" },
-      { property: "og:title", content: "ORTEQ India — Display Solutions to Everyone" },
+      { property: "og:title", content: "ORTEQ India — Premium Display Solutions" },
       {
         property: "og:description",
         content:
-          "Premium commercial display technology — LED walls, interactive panels, video walls, digital signage and industrial displays across India.",
+          "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "ORTEQ India" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@orteqindia" },
+      { name: "twitter:title", content: "ORTEQ India — Premium Display Solutions" },
+      { name: "twitter:description", content: "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/k5eR6dUi2teyBqdSkQTxYd1hc302/social-images/social-1784574956204-Image_Editor.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/k5eR6dUi2teyBqdSkQTxYd1hc302/social-images/social-1784574956204-Image_Editor.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

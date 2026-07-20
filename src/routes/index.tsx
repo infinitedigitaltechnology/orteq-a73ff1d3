@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
           "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments.",
       },
       { property: "og:title", content: "ORTEQ India — Premium Display Solutions" },
-      { property: "og:description", content: "LED walls, interactive panels, video walls and digital signage." },
+      { property: "og:description", content: "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments." },
     ],
   }),
   component: HomePage,
