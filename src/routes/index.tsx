@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, Zap, Wrench } from "lu
 import heroLedWall from "@/assets/hero-led-wall.jpg";
 import { PRODUCTS, INDUSTRIES, PROJECTS, COUNTERS, CLIENTS } from "@/lib/site-data";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import { ProductCarousel } from "@/components/site/ProductCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
