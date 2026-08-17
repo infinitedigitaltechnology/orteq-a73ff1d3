@@ -28,6 +28,7 @@ function HomePage() {
     <>
       <Hero />
       <MarqueeClients />
+      <ProductCarousel />
       <Bento />
       <ProductsShowcase />
       <MetricsBand />
