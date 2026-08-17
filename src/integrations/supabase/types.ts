@@ -664,6 +664,18 @@ export type Database = {
         }
         Relationships: []
       }
+      zz_hasrole_test: {
+        Row: {
+          id: number
+        }
+        Insert: {
+          id: number
+        }
+        Update: {
+          id?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
