@@ -9,15 +9,17 @@ export const Route = createFileRoute("/solutions/$slug")({
     return { solution };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Solution not found — ORTEQ" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Solution Not Found | ORTEQ India" }, { name: "robots", content: "noindex" }] };
     const { solution } = loaderData;
     return {
       meta: [
-        { title: `${solution.name} — ORTEQ India` },
+        { title: `${solution.name} | Display Solutions | ORTEQ India` },
         { name: "description", content: solution.summary },
-        { property: "og:title", content: `${solution.name} — ORTEQ India` },
+        { property: "og:title", content: `${solution.name} | ORTEQ India` },
         { property: "og:description", content: solution.summary },
+        { property: "og:type", content: "website" },
         { property: "og:url", content: `/solutions/${params.slug}` },
+        { name: "twitter:card", content: "summary" },
       ],
       links: [{ rel: "canonical", href: `/solutions/${params.slug}` }],
     };

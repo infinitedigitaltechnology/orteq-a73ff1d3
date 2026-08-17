@@ -5,10 +5,16 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ORTEQ India" },
-      { name: "description", content: "ORTEQ India — over a decade of engineering premium commercial display solutions across India." },
-      { property: "og:title", content: "About ORTEQ India" },
+      { title: "About ORTEQ India | Leading Commercial Display Solutions" },
+      {
+        name: "description",
+        content:
+          "Founded in 2010, ORTEQ India Pvt Ltd is a pioneer in visual technology. We design and deliver premium LED walls, interactive panels and command centers across 85+ cities.",
+      },
+      { property: "og:title", content: "About ORTEQ India | Engineering India's Display Future" },
       { property: "og:url", content: "/about" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),

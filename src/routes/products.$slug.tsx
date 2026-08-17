@@ -10,18 +10,20 @@ export const Route = createFileRoute("/products/$slug")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Product not found — ORTEQ" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Product Not Found | ORTEQ India" }, { name: "robots", content: "noindex" }] };
     }
     const { product } = loaderData;
     return {
       meta: [
-        { title: `${product.name} — ORTEQ India` },
+        { title: `${product.name} | ORTEQ India Premium Displays` },
         { name: "description", content: product.description },
-        { property: "og:title", content: `${product.name} — ORTEQ India` },
+        { property: "og:title", content: `${product.name} | ORTEQ India` },
         { property: "og:description", content: product.description },
         { property: "og:type", content: "product" },
         { property: "og:url", content: `/products/${params.slug}` },
         { property: "og:image", content: product.image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: product.image },
       ],
       links: [{ rel: "canonical", href: `/products/${params.slug}` }],
     };

@@ -6,10 +6,16 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — ORTEQ India" },
-      { name: "description", content: "Turnkey visual solutions: smart classroom, digital signage, boardroom, control room and more." },
-      { property: "og:title", content: "Solutions — ORTEQ India" },
+      { title: "Visual Solutions | Smart Classrooms & Digital Signage | ORTEQ India" },
+      {
+        name: "description",
+        content:
+          "Explore ORTEQ's turnkey visual systems: boardroom LED, digital kiosks, control room video walls, and smart classroom interactivity.",
+      },
+      { property: "og:title", content: "Turnkey Visual Solutions | ORTEQ India" },
       { property: "og:url", content: "/solutions" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
   }),

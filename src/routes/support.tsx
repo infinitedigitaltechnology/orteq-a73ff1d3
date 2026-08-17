@@ -20,14 +20,26 @@ function SupportPage() {
     <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
       <SectionHeading
         eyebrow="Support"
-        title="Raise a service ticket."
-        description="Certified engineers respond within 48 hours across 85+ Indian cities."
+        title="Technical Service & Warranty."
+        description="Certified engineers respond within 4 business hours. On-site support across 85+ Indian cities."
       />
+      <div className="mb-10 p-6 rounded-2xl bg-secondary/50 border border-hairline flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 className="font-display font-semibold">Existing customers & partners</h3>
+          <p className="text-sm text-muted-foreground">Track tickets, upload logs, and view resolution history in the portal.</p>
+        </div>
+        <a 
+          href="/support-portal"
+          className="rounded-full bg-foreground text-background px-6 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          Open Support Portal
+        </a>
+      </div>
       {submitted ? (
-        <div className="rounded-3xl border border-hairline bg-white p-8">
-          <h3 className="font-display text-xl font-semibold">Ticket received.</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Our helpdesk will reach out within 4 business hours.
+        <div className="rounded-3xl border border-hairline bg-white p-10 text-center">
+          <h3 className="font-display text-2xl font-semibold">Ticket Raised.</h3>
+          <p className="mt-3 text-sm text-muted-foreground">
+            A technical specialist will contact you on your registered phone number.
           </p>
         </div>
       ) : (

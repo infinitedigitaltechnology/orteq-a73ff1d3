@@ -31,11 +31,10 @@ function DownloadsPage() {
               <div className="text-xs text-muted-foreground">PDF · 1.2 MB</div>
             </div>
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-xs font-medium hover:border-foreground"
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-xs font-medium hover:border-primary hover:text-primary transition-colors"
             >
-              <FileDown className="size-3.5" /> Request
+              <FileDown className="size-3.5" /> Request Datasheet
             </a>
           </li>
         ))}

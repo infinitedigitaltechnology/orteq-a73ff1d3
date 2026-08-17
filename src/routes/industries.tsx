@@ -5,11 +5,17 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: "Industries — ORTEQ India" },
-      { name: "description", content: "Vertical-specific display architectures for Education, Corporate, Healthcare, Retail, Government and more." },
-      { property: "og:title", content: "Industries — ORTEQ India" },
-      { property: "og:description", content: "Display solutions engineered per vertical." },
+      { title: "Industries Served | Display Solutions | ORTEQ India" },
+      {
+        name: "description",
+        content:
+          "ORTEQ India engineers tailored display architectures for Education, Corporate, Healthcare, Retail, and Infrastructure sectors.",
+      },
+      { property: "og:title", content: "Industries Served | ORTEQ India" },
+      { property: "og:description", content: "Visual technology solutions engineered per vertical." },
       { property: "og:url", content: "/industries" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
   }),

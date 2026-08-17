@@ -6,10 +6,16 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact ORTEQ India" },
-      { name: "description", content: "Get in touch with ORTEQ India's sales and solutions team. Nationwide response within 48 hours." },
-      { property: "og:title", content: "Contact ORTEQ India" },
+      { title: "Contact ORTEQ India | Nationwide Display Solutions Support" },
+      {
+        name: "description",
+        content:
+          "Get in touch with ORTEQ India for product inquiries, site surveys, or technical support. Nationwide presence with 48-hour response guarantee.",
+      },
+      { property: "og:title", content: "Contact ORTEQ India | Talk to a Solutions Engineer" },
       { property: "og:url", content: "/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),

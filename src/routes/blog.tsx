@@ -28,10 +28,13 @@ function BlogPage() {
       <SectionHeading eyebrow="Insights" title="Ideas, engineered." />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {POSTS.map((p) => (
-          <article key={p.title} className="rounded-3xl border border-hairline bg-white p-8">
+          <article key={p.title} className="group flex flex-col rounded-3xl border border-hairline bg-white p-8 transition-all hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
             <div className="text-[10px] font-medium uppercase tracking-widest text-primary">{p.tag} · {p.read}</div>
-            <h3 className="mt-3 font-display text-xl font-semibold text-balance">{p.title}</h3>
-            <p className="mt-4 text-sm text-muted-foreground">Coming soon on the ORTEQ insights journal.</p>
+            <h3 className="mt-3 font-display text-xl font-semibold text-balance group-hover:text-primary transition-colors">{p.title}</h3>
+            <p className="mt-4 text-sm text-muted-foreground line-clamp-2">Practical guides and engineering case studies from ORTEQ's visual technology labs.</p>
+            <div className="mt-auto pt-6 flex items-center text-xs font-semibold text-primary">
+              Read Article <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+            </div>
           </article>
         ))}
       </div>
