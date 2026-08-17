@@ -108,8 +108,9 @@ export function HeroBanner() {
           loading="eager"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/85 to-foreground/25" />
-      <div className="pointer-events-none absolute -left-24 top-1/3 size-[28rem] rounded-full bg-primary/25 blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/30" />
+      <div className="pointer-events-none absolute -left-24 top-1/3 size-[28rem] rounded-full bg-primary/20 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-24 bottom-1/4 size-[24rem] rounded-full bg-primary/10 blur-[100px]" />
 
       <div className="relative mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-center px-6 py-24 md:min-h-[86vh]">
         <AnimatePresence mode="wait">
