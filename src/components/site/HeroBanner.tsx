@@ -11,8 +11,8 @@ type Slide = {
   highlight: string;
   copy: string;
   image: string;
-  to: string;
-  slug?: string;
+  kind: "product" | "solution";
+  slug: string;
 };
 
 const bySlug = (slug: string) => PRODUCTS.find((p) => p.slug === slug);
@@ -24,7 +24,7 @@ const SLIDES: Slide[] = [
     highlight: "in your hand.",
     copy: "165-inch plug-and-play LED canvases that turn any boardroom into a broadcast studio.",
     image: bySlug("all-in-one-displays")?.image ?? PRODUCTS[0].image,
-    to: "/products/$slug",
+    kind: "product",
     slug: "all-in-one-displays",
   },
   {
@@ -33,7 +33,7 @@ const SLIDES: Slide[] = [
     highlight: "mission-critical.",
     copy: "Seamless digital LED walls and ultra-narrow-bezel video walls built for 24×7 duty cycles.",
     image: bySlug("digital-led-walls")?.image ?? PRODUCTS[1].image,
-    to: "/products/$slug",
+    kind: "product",
     slug: "digital-led-walls",
   },
   {
@@ -41,8 +41,8 @@ const SLIDES: Slide[] = [
     title: "Attention,",
     highlight: "engineered.",
     copy: "Cloud-managed signage networks that stay bright, in sync and on brand across every location.",
-    image: bySlug("digital-signage")?.image ?? PRODUCTS[2].image,
-    to: "/solutions/$slug",
+    image: bySlug("digital-standees")?.image ?? PRODUCTS[2].image,
+    kind: "solution",
     slug: "digital-signage",
   },
 ];
@@ -107,14 +107,25 @@ export function HeroBanner() {
               {slide.copy}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to={slide.to}
-                params={{ slug: slide.slug! }}
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-transform hover:brightness-110 active:scale-95"
-              >
-                Explore this range
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
+              {slide.kind === "product" ? (
+                <Link
+                  to="/products/$slug"
+                  params={{ slug: slide.slug }}
+                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-transform hover:brightness-110 active:scale-95"
+                >
+                  Explore this range
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              ) : (
+                <Link
+                  to="/solutions/$slug"
+                  params={{ slug: slide.slug }}
+                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-transform hover:brightness-110 active:scale-95"
+                >
+                  Explore this solution
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-background/30 px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-background/10"
