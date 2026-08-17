@@ -1,21 +1,20 @@
 ---
-name: Logo Update Plan
-description: Optimized and Update the ORTEQ logo in the website header and footer.
+name: Manual Logo Upload Support
+description: Update the Logo component to support a manually uploaded image file while maintaining the premium styling.
 type: feature
 ---
 
-# Plan: Logo Optimization and Update
+# Plan: Manual Logo Upload Support
 
-I will update the current text-based logo with a premium SVG-based brand identity for ORTEQ.
+I will modify the `Logo` component to use an uploaded image asset instead of the current SVG icon, ensuring it fits perfectly within the premium design language.
 
 ## Files to be modified:
-1.  **`src/components/site/Logo.tsx`**: Create a new reusable logo component that encapsulates the ORTEQ brand identity (SVG + Typography).
-2.  **`src/components/site/SiteHeader.tsx`**: Replace the current text-based logo with the new `<Logo />` component.
-3.  **`src/components/site/SiteFooter.tsx`**: Replace the current text-based logo with the new `<Logo />` component (footer variant).
+1.  **`src/components/site/Logo.tsx`**: Update to support an image-based logo from `public/logo.png` (or similar) with fallback to the existing premium SVG.
+2.  **`src/styles.css`**: (Optional) Add specific classes if needed for logo scaling/aspect ratio.
 
 ## Technical Details:
-- The logo will use the brand colors: Midnight Indigo (#0A0F2C) and Signal Red (#D71920).
-- The SVG will be optimized for fast loading and crisp rendering on all displays.
-- The component will support different variants (header vs footer) and sizes.
+- I will implement a check for `src/assets/logo.png` or `public/logo.png`.
+- The component will handle aspect ratio gracefully to prevent layout shifts.
+- I will provide instructions on where to place the file for the user to manually upload.
 
-I will now proceed with creating the logo component and updating the site.
+I will now wait for your approval of this plan before proceeding.
