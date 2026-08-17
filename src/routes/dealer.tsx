@@ -37,9 +37,17 @@ function DealerPage() {
           </div>
         ))}
       </div>
-      <div className="mt-12 rounded-3xl border border-hairline bg-secondary/40 p-8 text-center">
-        <h3 className="font-display text-xl font-semibold">Ready to apply?</h3>
-        <p className="mt-2 text-sm text-muted-foreground">Send us a note at partners@orteq.in — response within 3 business days.</p>
+      <div className="mt-12 rounded-3xl border border-hairline bg-secondary/40 p-10 text-center">
+        <h3 className="font-display text-2xl font-semibold text-balance">Become a certified ORTEQ Partner</h3>
+        <p className="mt-3 text-sm text-muted-foreground text-pretty max-w-xl mx-auto">
+          Access protected pricing, engineering support, and qualified leads. Applications are reviewed within 3 business days.
+        </p>
+        <a 
+          href="/dealer-portal"
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground hover:brightness-110 transition-all"
+        >
+          Apply to Join Network
+        </a>
       </div>
     </div>
   );
