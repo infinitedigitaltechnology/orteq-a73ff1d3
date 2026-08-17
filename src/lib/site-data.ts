@@ -122,8 +122,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "all-in-one-displays",
-    name: "All-In-One Displays",
-    tagline: "Plug-and-play brilliance at flagship scale.",
+    name: "All-In-One LED Displays",
+    tagline: "The Pinnacle of Boardroom Excellence.",
     description:
       "Integrated LED All-In-One displays engineered for boardrooms and command centers — ready in minutes, brilliant for decades.",
     image: productAio,
