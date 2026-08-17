@@ -12,16 +12,19 @@ export const Route = createFileRoute("/industries/$slug")({
     return { industry, recommended };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Industry not found — ORTEQ" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Industry Not Found | ORTEQ India" }, { name: "robots", content: "noindex" }] };
     const { industry } = loaderData;
     return {
       meta: [
-        { title: `${industry.name} — Display Solutions | ORTEQ India` },
+        { title: `${industry.name} Display Solutions | ORTEQ India` },
         { name: "description", content: industry.description },
-        { property: "og:title", content: `${industry.name} — Display Solutions | ORTEQ India` },
+        { property: "og:title", content: `${industry.name} Display Solutions | ORTEQ India` },
         { property: "og:description", content: industry.description },
+        { property: "og:type", content: "website" },
         { property: "og:url", content: `/industries/${params.slug}` },
         { property: "og:image", content: industry.image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: industry.image },
       ],
       links: [{ rel: "canonical", href: `/industries/${params.slug}` }],
     };

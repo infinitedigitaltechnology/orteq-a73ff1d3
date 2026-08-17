@@ -10,19 +10,22 @@ import { ProductCarousel } from "@/components/site/ProductCarousel";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ORTEQ India — Premium Display Solutions" },
+      { title: "ORTEQ India | Premium LED Walls, Interactive Panels & Digital Signage" },
       {
         name: "description",
         content:
-          "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments.",
+          "ORTEQ India is a leading commercial display solutions provider. We engineer premium LED walls, 4K interactive panels, LCD video walls and digital kiosks for enterprise, retail and infrastructure.",
       },
-      { property: "og:title", content: "ORTEQ India — Premium Display Solutions" },
+      { property: "og:title", content: "ORTEQ India | Leading Display Solutions Provider" },
       {
         property: "og:description",
         content:
-          "Premium LED walls, interactive panels, video walls and digital signage engineered for India's most demanding environments.",
+          "Precision-engineered visual technology for modern spaces. Nationwide installation and 48-hour service across 85+ cities.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: HomePage,
 });
