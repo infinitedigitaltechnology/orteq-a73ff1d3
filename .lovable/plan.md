@@ -1,41 +1,18 @@
+# Homepage product slider
 
-# Palette Update — Midnight Indigo + Red
+Add an auto-sliding image carousel of products to the homepage.
 
-Apply the selected palette across the site without touching layout, copy, or business logic.
+## What it looks like
+- A full-width section titled "The ORTEQ range" placed between the client marquee and the bento grid.
+- Each slide is a large product image card with the product name, tagline and a "View product" link.
+- Desktop shows about 3 cards at once, tablet 2, mobile 1 — with peek of the next slide.
+- Auto-advances every ~4 seconds, pauses on hover, loops infinitely.
+- Prev/next arrow buttons plus dot indicators; swipe works on touch.
+- Whole card links to the product detail page.
 
-## Palette
-
-- Deep Indigo (base ink / dark surfaces): `#0A0F2C`
-- Indigo Elevated (secondary dark, header/footer, hero backdrop): `#1A2350`
-- Signal Red (primary accent — CTAs, links, highlights): `#D71920`
-- Platinum (background canvas, light surfaces): `#F5F6FA`
-- Supporting neutrals derived from indigo (hairline, muted text)
-
-## Scope of changes
-
-Single file: `src/styles.css`
-
-1. Update `:root` tokens:
-   - `--background` → platinum `#F5F6FA`
-   - `--foreground` / `--ink` → deep indigo `#0A0F2C`
-   - `--ink-soft` / `--muted-foreground` → indigo-tinted grey
-   - `--brand-dark` → `#1A2350` (elevated indigo for dark bands)
-   - `--hairline` / `--border` → cool indigo-tinted hairline
-   - `--secondary` → very light indigo tint (replaces neutral grey)
-   - `--primary` stays Signal Red `#D71920`
-2. Update `.dark` tokens so dark mode uses `#0A0F2C` base and `#1A2350` cards, keeping red accent.
-3. Update `::selection` to indigo-tinted red highlight for consistency.
-4. Keep glass-panel utility but retint its border toward indigo.
-
-All values written in `oklch()` to match existing token format.
-
-## Not changing
-
-- No component, route, or copy edits.
-- Typography (Montserrat / Poppins / Inter) unchanged.
-- Layouts, hero image, bento grid, marquee — untouched.
-- No token renames — every existing utility (`bg-primary`, `text-foreground`, `border-hairline`, `bg-foreground`, etc.) continues to work; only the values behind them shift.
-
-## Verification
-
-- Load `/`, `/products`, `/industries`, `/contact`, `/auth` in preview and confirm: white → platinum canvas, dark CTA band renders indigo (not near-black), red accents remain crisp, text contrast passes on both light and dark surfaces.
+## Technical notes
+- New component `src/components/site/ProductCarousel.tsx` using the existing shadcn `carousel.tsx` (embla is already installed) with `loop: true` and a small autoplay effect via `setInterval` on the carousel API (no new dependency).
+- Data comes from `PRODUCTS` in `src/lib/site-data.ts` — no new data or backend changes.
+- Styling uses existing tokens (platinum canvas, indigo ink, Signal Red accent), rounded-3xl cards, hairline borders, hover scale on the image.
+- `src/routes/index.tsx` renders `<ProductCarousel />` after `<MarqueeClients />`.
+- Images keep `loading="lazy"` and descriptive alt text.
