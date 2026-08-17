@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, User } from "lucide-react";
 import { PRODUCTS, INDUSTRIES, SOLUTIONS } from "@/lib/site-data";
+import { Logo } from "@/components/site/Logo";
 import { useSession } from "@/hooks/use-session";
 
 const NAV = [
@@ -38,9 +39,8 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-10">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="size-5 rounded-sm bg-primary" aria-hidden />
-            <span className="font-display text-lg font-semibold tracking-tight">ORTEQ</span>
+          <Link to="/" className="flex items-center">
+            <Logo />
           </Link>
           <nav
             className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex"

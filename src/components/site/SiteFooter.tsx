@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Logo } from "@/components/site/Logo";
 
 export function SiteFooter() {
   return (
@@ -6,9 +7,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
           <div className="lg:col-span-2">
-            <div className="mb-6 flex items-center gap-2">
-              <span className="size-4 rounded-sm bg-primary" aria-hidden />
-              <span className="font-display text-lg font-semibold tracking-tight">ORTEQ INDIA</span>
+            <div className="mb-6">
+              <Logo variant="footer" />
             </div>
             <p className="max-w-[36ch] text-sm leading-relaxed text-muted-foreground text-pretty">
               Leading the visual revolution with high-performance commercial displays engineered for
