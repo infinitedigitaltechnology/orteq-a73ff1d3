@@ -40,8 +40,8 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     slug: "interactive-flat-panels",
-    name: "Interactive Flat Panels",
-    tagline: "Collaboration, on tap.",
+    name: "Interactive Flat Panels (IFP)",
+    tagline: "The Future of Collaborative Learning.",
     description:
       "Ultra-slim 4K interactive flat panels for smart classrooms and modern meeting rooms — with 20-point touch.",
     image: productIfp,
@@ -69,8 +69,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "self-service-displays",
-    name: "Self-Service Displays",
-    tagline: "Interaction, unattended.",
+    name: "Intelligent Self-Service Kiosks",
+    tagline: "Automating Excellence in Every Interaction.",
     description:
       "Rugged self-service kiosks with integrated peripherals for check-in, ordering and public-service automation.",
     image: productSelfservice,
@@ -92,8 +92,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "drones",
-    name: "Drones",
-    tagline: "Aerial intelligence, on demand.",
+    name: "ORTEQ Enterprise Drones",
+    tagline: "Precision Aerial Intelligence.",
     description:
       "Commercial-grade drones for surveillance, inspection, mapping and cinematic capture — engineered for enterprise workflows and mission-critical operations.",
     image: productDrone,
@@ -122,8 +122,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "all-in-one-displays",
-    name: "All-In-One Displays",
-    tagline: "Plug-and-play brilliance at flagship scale.",
+    name: "All-In-One LED Displays",
+    tagline: "The Pinnacle of Boardroom Excellence.",
     description:
       "Integrated LED All-In-One displays engineered for boardrooms and command centers — ready in minutes, brilliant for decades.",
     image: productAio,
@@ -151,8 +151,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "digital-led-walls",
-    name: "Digital LED Walls",
-    tagline: "Seamless, unlimited canvas.",
+    name: "Seamless Digital LED Walls",
+    tagline: "Architectural Scale. Unmatched Clarity.",
     description:
       "Fine-pitch modular LED walls for auditoriums, control rooms and flagship retail — engineered for 24/7 operation.",
     image: productLedwall,
