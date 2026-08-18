@@ -34,13 +34,18 @@ function ContactPage() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
         <div className="md:col-span-2 space-y-6">
           <InfoCard icon={<Phone className="size-4" />} title="Sales">
-            +91 11 0000 0000
+            <div className="flex flex-col gap-1">
+              <a href="tel:+919524733999" className="hover:text-primary transition-colors">+91 95247 33999</a>
+              <a href="tel:+918122273295" className="hover:text-primary transition-colors">+91 81222 73295</a>
+              <a href="tel:+919840909409" className="hover:text-primary transition-colors">+91 98409 09409</a>
+            </div>
           </InfoCard>
           <InfoCard icon={<Mail className="size-4" />} title="Email">
-            hello@orteq.in
+            <a href="mailto:admin@orteq.in" className="hover:text-primary transition-colors">admin@orteq.in</a>
           </InfoCard>
           <InfoCard icon={<MapPin className="size-4" />} title="HQ">
-            Corporate Office, New Delhi, India
+            37, Old No.62, South West Boag Road,<br />
+            T. Nagar, Chennai-600017
           </InfoCard>
           <div className="rounded-3xl bg-foreground p-8 text-background">
             <h3 className="font-display text-lg font-semibold">Response guarantee</h3>
