@@ -124,7 +124,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "ORTEQ India Pvt Ltd",
           url: "https://www.orteq.in",
-          logo: "https://www.orteq.in/favicon.ico",
+          logo: "https://www.orteq.in/favicon.png",
           sameAs: [],
           description:
             "ORTEQ India is a leading commercial display solutions company providing LED walls, interactive flat panels, video walls, digital signage, industrial and enterprise displays.",
