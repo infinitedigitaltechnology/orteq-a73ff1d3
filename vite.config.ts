@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    // Default build target: Node.js server (change to 'cloudflare-pages'/'cloudflare-module' for serverless).
+    preset: "node-server",
+  },
 });
