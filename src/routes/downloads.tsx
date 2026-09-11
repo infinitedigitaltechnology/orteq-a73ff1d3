@@ -34,7 +34,7 @@ function DownloadsPage() {
         description="Everything you need to specify, procure and deploy an ORTEQ display system."
       />
       <ul className="divide-y divide-hairline rounded-3xl border border-hairline bg-white">
-        {PRODUCTS.map((p) => (
+        {products.map((p) => (
           <li key={p.slug} className="flex items-center justify-between gap-4 px-6 py-4">
             <div>
               <div className="font-display text-base font-semibold">{p.name} datasheet</div>
