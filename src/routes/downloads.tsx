@@ -25,6 +25,7 @@ export const Route = createFileRoute("/downloads")({
 });
 
 function DownloadsPage() {
+  const { products } = Route.useLoaderData();
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <SectionHeading
