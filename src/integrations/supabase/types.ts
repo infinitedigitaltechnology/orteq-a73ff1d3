@@ -211,6 +211,8 @@ export type Database = {
       }
       products: {
         Row: {
+          advantages: Json
+          applications: Json
           body: string | null
           category: string | null
           cover_image: string | null
@@ -229,6 +231,8 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          advantages?: Json
+          applications?: Json
           body?: string | null
           category?: string | null
           cover_image?: string | null
@@ -247,6 +251,8 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          advantages?: Json
+          applications?: Json
           body?: string | null
           category?: string | null
           cover_image?: string | null

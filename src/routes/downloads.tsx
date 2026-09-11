@@ -1,9 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FileDown } from "lucide-react";
-import { PRODUCTS } from "@/lib/site-data";
+import { listCmsProducts, mergeProducts } from "@/lib/products.functions";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 export const Route = createFileRoute("/downloads")({
+  loader: async () => ({ products: mergeProducts(await listCmsProducts()) }),
+  errorComponent: ({ error }) => (
+    <div role="alert" className="mx-auto max-w-3xl px-6 py-24 text-center text-sm text-muted-foreground">
+      {error.message}
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div className="mx-auto max-w-3xl px-6 py-24 text-center">No downloads found.</div>
+  ),
   head: () => ({
     meta: [
       { title: "Downloads — ORTEQ India" },
@@ -16,6 +25,7 @@ export const Route = createFileRoute("/downloads")({
 });
 
 function DownloadsPage() {
+  const { products } = Route.useLoaderData();
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <SectionHeading
@@ -24,7 +34,7 @@ function DownloadsPage() {
         description="Everything you need to specify, procure and deploy an ORTEQ display system."
       />
       <ul className="divide-y divide-hairline rounded-3xl border border-hairline bg-white">
-        {PRODUCTS.map((p) => (
+        {products.map((p) => (
           <li key={p.slug} className="flex items-center justify-between gap-4 px-6 py-4">
             <div>
               <div className="font-display text-base font-semibold">{p.name} datasheet</div>

@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
-import { PRODUCTS } from "@/lib/site-data";
+import { listCmsProducts, mergeProducts } from "@/lib/products.functions";
 
 export const Route = createFileRoute("/products/$slug")({
-  loader: ({ params }) => {
-    const product = PRODUCTS.find((p) => p.slug === params.slug);
+  loader: async ({ params }) => {
+    const product = mergeProducts(await listCmsProducts()).find((p) => p.slug === params.slug);
     if (!product) throw notFound();
     return { product };
   },

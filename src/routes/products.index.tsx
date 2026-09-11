@@ -1,9 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PRODUCTS } from "@/lib/site-data";
+import { listCmsProducts, mergeProducts } from "@/lib/products.functions";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 export const Route = createFileRoute("/products/")({
+  loader: async () => ({ products: mergeProducts(await listCmsProducts()) }),
+  errorComponent: ({ error }) => (
+    <div role="alert" className="mx-auto max-w-3xl px-6 py-24 text-center text-sm text-muted-foreground">
+      {error.message}
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div className="mx-auto max-w-3xl px-6 py-24 text-center">No products found.</div>
+  ),
   head: () => ({
     meta: [
       { title: "Products — ORTEQ India" },
@@ -21,6 +30,7 @@ export const Route = createFileRoute("/products/")({
 });
 
 function ProductsIndex() {
+  const { products } = Route.useLoaderData();
   return (
     <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <SectionHeading
@@ -29,7 +39,7 @@ function ProductsIndex() {
         description="From flagship All-In-One LED to ruggedised industrial HMIs — a complete visual technology portfolio."
       />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {PRODUCTS.map((p) => (
+        {products.map((p) => (
           <Link
             key={p.slug}
             to="/products/$slug"
