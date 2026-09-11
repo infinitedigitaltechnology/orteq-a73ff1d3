@@ -1,26 +1,38 @@
-# Plan: Add 43" Floor Standing Non-Touch Digital Signage
+# Manage products from the admin area
 
-Add a new product entry to the catalog based on the extracted specifications for the "ORTEQ 43inch Floor Standing Non-Touch Digital Signage".
+Right now the admin area can save products into the database, but the public
+Products pages still show a fixed built-in list. Anything added in admin never
+appears on the site. This connects the two.
 
-## User Review Required
+## What you'll be able to do
 
-> [!IMPORTANT]
-> I will use a placeholder image for the new 43" Floor Standing Signage until a specific asset is provided or generated.
+- Open Admin > Products, click New, fill in the details (name, tagline,
+  description, image, category, applications, key features, advantages, specs)
+  and set it to Published.
+- The new product immediately shows on the Products page, gets its own detail
+  page, and appears in the downloads list.
+- Editing or unpublishing a product updates the site the same way.
+- The existing built-in products stay visible; a database product with the same
+  short name replaces the built-in one.
 
-## Proposed Changes
+## Changes
 
-### Content Integration
+1. **Database** — add two fields to the products record: `applications` and
+   `advantages` (both lists), so product detail pages are complete.
+2. **New file `src/lib/products.functions.ts`** — a public read of published
+   products, converted into the same shape the pages already use, merged with
+   the built-in list.
+3. **`src/routes/products.index.tsx`** — load the merged list instead of the
+   fixed one.
+4. **`src/routes/products.$slug.tsx`** — look up the product in the merged list.
+5. **`src/routes/_authenticated/admin.tsx`** — add Applications and Advantages
+   input boxes to the product form.
 
-#### [src/lib/site-data.ts](src/lib/site-data.ts)
-- Add the 43" Floor Standing Non-Touch Digital Signage to the `PRODUCTS` array.
-- **Specifications to be included:**
-  - Name: ORTEQ 43" Floor Standing Non-Touch Digital Signage
-  - Applications: Retail, Malls, Airports, Corporate Lobbies
-  - Features: Industrial grade panel, 24/7 operation, tempered glass protection, integrated media player
-  - Specs: 43" Display, 1920x1080 Resolution, 450-500 nits Brightness, Android OS
+Nothing else changes: login, portals, other pages and the built-in product
+content stay exactly as they are.
 
-### Verification Plan
+## Verification
 
-- Check the products listing page (`/products`) to ensure the new standee appears.
-- Navigate to the new product detail page (`/products/43-floor-standing-signage`) and verify all specifications are rendered correctly.
-- Verify the "Request Quote" and "Download Datasheet" buttons work as expected.
+- Build must pass.
+- Create a test product in admin, confirm it appears on /products and its detail
+  page, then delete it.
