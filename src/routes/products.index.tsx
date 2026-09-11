@@ -1,9 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PRODUCTS } from "@/lib/site-data";
+import { listCmsProducts, mergeProducts } from "@/lib/products.functions";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 export const Route = createFileRoute("/products/")({
+  loader: async () => ({ products: mergeProducts(await listCmsProducts()) }),
+  errorComponent: ({ error }) => (
+    <div role="alert" className="mx-auto max-w-3xl px-6 py-24 text-center text-sm text-muted-foreground">
+      {error.message}
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div className="mx-auto max-w-3xl px-6 py-24 text-center">No products found.</div>
+  ),
   head: () => ({
     meta: [
       { title: "Products — ORTEQ India" },
