@@ -30,6 +30,7 @@ export const Route = createFileRoute("/products/")({
 });
 
 function ProductsIndex() {
+  const { products } = Route.useLoaderData();
   return (
     <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <SectionHeading
