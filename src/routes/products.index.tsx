@@ -39,7 +39,7 @@ function ProductsIndex() {
         description="From flagship All-In-One LED to ruggedised industrial HMIs — a complete visual technology portfolio."
       />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {PRODUCTS.map((p) => (
+        {products.map((p) => (
           <Link
             key={p.slug}
             to="/products/$slug"
