@@ -108,7 +108,9 @@ const TABLE_CONFIG: Record<TableName, { label: string; fields: FieldDef[] }> = {
   },
 };
 
-const JSON_KEYS = new Set(["features", "specs", "gallery", "challenges", "outcomes", "highlights"]);
+const JSON_KEYS = new Set([
+  "features", "specs", "gallery", "challenges", "outcomes", "highlights", "applications", "advantages",
+]);
 
 function AdminPage() {
   const { user } = useSession();
