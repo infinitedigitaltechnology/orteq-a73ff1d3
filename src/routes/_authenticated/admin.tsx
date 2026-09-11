@@ -49,6 +49,8 @@ const TABLE_CONFIG: Record<TableName, { label: string; fields: FieldDef[] }> = {
     fields: [
       ...SHARED_META,
       { key: "category", label: "Category" },
+      { key: "applications", label: "Applications (JSON array of strings)", type: "json", span: 2 },
+      { key: "advantages", label: "Why ORTEQ / advantages (JSON array of strings)", type: "json", span: 2 },
       { key: "features", label: "Features (JSON array of strings)", type: "json", span: 2 },
       { key: "specs", label: "Specs (JSON array of {label,value})", type: "json", span: 2 },
       { key: "gallery", label: "Gallery (JSON array of URLs)", type: "json", span: 2 },
